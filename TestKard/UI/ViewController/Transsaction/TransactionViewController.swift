@@ -12,6 +12,11 @@ class TransactionViewController: UIViewController {
     
     @IBOutlet private weak var tableTransaction: UITableView!
     fileprivate var viewModel: TransactionViewModel = TransactionViewModel()
+    fileprivate lazy var headerView: TransactionHeader = {
+        let view = TransactionHeader()
+        view.delegate = self
+        return view
+    }()
     
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
@@ -24,13 +29,34 @@ class TransactionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        //setupHeaderTableView()
         getTransactions()
+    }
+    
+    private func setupHeaderTableView() {
+        let headerView = TransactionHeader()
+        headerView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 50)
+        headerView.delegate = self
+        
+        let containerView = UIView()
+        containerView.translatesAutoresizingMaskIntoConstraints = false
+        containerView.addSubview(headerView)
+        
+        tableTransaction.tableHeaderView = containerView
+        
+//        containerView.centerXAnchor.constraint(equalTo: tableTransaction.centerXAnchor).isActive = true
+//        containerView.widthAnchor.constraint(equalTo: tableTransaction.widthAnchor).isActive = true
+//        containerView.topAnchor.constraint(equalTo: tableTransaction.topAnchor).isActive = true
+        
+        tableTransaction.tableHeaderView?.layoutIfNeeded()
+        tableTransaction.tableHeaderView = tableTransaction.tableHeaderView
     }
     
     private func setupTableView() {
         tableTransaction.estimatedRowHeight = 80
         tableTransaction.rowHeight = UITableView.automaticDimension
         tableTransaction.dataSource = self
+        tableTransaction.delegate = self
         tableTransaction.register(UINib(nibName: TransactionCell.typeName, bundle: nil), forCellReuseIdentifier: TransactionCell.typeName)
         tableTransaction.addSubview(self.refreshControl)
     }
@@ -80,6 +106,31 @@ extension TransactionViewController: UITableViewDataSource {
                                  currency: transaction.node.amount.currency.symbol)
         cell.setup(with: transactionCellModel)
         return cell
+    }
+}
+
+extension TransactionViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
+    }
+    
+}
+
+extension TransactionViewController: TransactionHeaderDelegate {
+    
+    func showFriends() {
+        viewModel.shuffleTransactions()
+        tableTransaction.reloadData()
+    }
+    
+    func showMe() {
+        viewModel.shuffleTransactions()
+        tableTransaction.reloadData()
     }
     
 }

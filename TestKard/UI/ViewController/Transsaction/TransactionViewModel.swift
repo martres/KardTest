@@ -29,7 +29,7 @@ class TransactionViewModel {
         }
     }
     
-    
-    
-    
+    func shuffleTransactions() {
+        transactions.shuffle()
+    } 
 }

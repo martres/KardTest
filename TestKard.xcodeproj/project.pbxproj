@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,11 @@
 		65DF0E9A22E87FFA006AC021 /* UserMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DF0E9922E87FFA006AC021 /* UserMe.swift */; };
 		65DF0E9C22E88EBF006AC021 /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DF0E9B22E88EBF006AC021 /* TransactionViewModel.swift */; };
 		65DF0E9D22E892DD006AC021 /* transaction.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 65DF0E8622E790EE006AC021 /* transaction.graphql */; };
+		65DF0EA122E8A0D2006AC021 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DF0EA022E8A0D2006AC021 /* ContainerViewController.swift */; };
+		65DF0EA422E8A92F006AC021 /* TransactionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DF0EA322E8A92F006AC021 /* TransactionHeader.swift */; };
+		65DF0EA722E8AA09006AC021 /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DF0EA622E8AA09006AC021 /* XibView.swift */; };
+		65DF0EA922E8AB33006AC021 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DF0EA822E8AB33006AC021 /* UIView.swift */; };
+		65DF0EAB22E8AB85006AC021 /* TransactionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65DF0EAA22E8AB85006AC021 /* TransactionHeader.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +73,11 @@
 		65DF0E9722E85E15006AC021 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		65DF0E9922E87FFA006AC021 /* UserMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMe.swift; sourceTree = "<group>"; };
 		65DF0E9B22E88EBF006AC021 /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
+		65DF0EA022E8A0D2006AC021 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		65DF0EA322E8A92F006AC021 /* TransactionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHeader.swift; sourceTree = "<group>"; };
+		65DF0EA622E8AA09006AC021 /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
+		65DF0EA822E8AB33006AC021 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		65DF0EAA22E8AB85006AC021 /* TransactionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionHeader.xib; sourceTree = "<group>"; };
 		FA1312071E4D32DED5645A5F /* Pods-TestKard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestKard.release.xcconfig"; path = "Target Support Files/Pods-TestKard/Pods-TestKard.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +119,8 @@
 		654CAAFB22E776EE0014277E /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				65DF0EA522E8A9FE006AC021 /* Utils */,
+				65DF0EA222E8A8FE006AC021 /* Header */,
 				654CAAFD22E777200014277E /* Cell */,
 				654CAAFE22E7772A0014277E /* ViewController */,
 			);
@@ -127,8 +139,8 @@
 		654CAAFE22E7772A0014277E /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				6559872322E77E4C0096C225 /* TransactionViewController.swift */,
-				65DF0E9B22E88EBF006AC021 /* TransactionViewModel.swift */,
+				65DF0E9F22E8A0A1006AC021 /* Transsaction */,
+				65DF0E9E22E8A04D006AC021 /* Container */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -188,8 +200,8 @@
 				6559872722E781500096C225 /* Network */,
 				6559872A22E782D50096C225 /* Services */,
 				654CAAFB22E776EE0014277E /* UI */,
-				659C8C5F22E7559B00DC71F6 /* Main.storyboard */,
 				659C8C6222E755A200DC71F6 /* Assets.xcassets */,
+				659C8C5F22E7559B00DC71F6 /* Main.storyboard */,
 				659C8C6422E755A200DC71F6 /* LaunchScreen.storyboard */,
 				659C8C6722E755A200DC71F6 /* Info.plist */,
 			);
@@ -218,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				65DF0E8922E796FD006AC021 /* NameDescribable.swift */,
+				65DF0EA822E8AB33006AC021 /* UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -230,6 +243,40 @@
 				65DF0E9922E87FFA006AC021 /* UserMe.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		65DF0E9E22E8A04D006AC021 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				65DF0EA022E8A0D2006AC021 /* ContainerViewController.swift */,
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
+		65DF0E9F22E8A0A1006AC021 /* Transsaction */ = {
+			isa = PBXGroup;
+			children = (
+				6559872322E77E4C0096C225 /* TransactionViewController.swift */,
+				65DF0E9B22E88EBF006AC021 /* TransactionViewModel.swift */,
+			);
+			path = Transsaction;
+			sourceTree = "<group>";
+		};
+		65DF0EA222E8A8FE006AC021 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				65DF0EA322E8A92F006AC021 /* TransactionHeader.swift */,
+				65DF0EAA22E8AB85006AC021 /* TransactionHeader.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		65DF0EA522E8A9FE006AC021 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				65DF0EA622E8AA09006AC021 /* XibView.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		FFB87BCDEA4AC50EAAA6A7B2 /* Frameworks */ = {
@@ -351,6 +398,7 @@
 				654CAB0222E777D00014277E /* TransactionCell.xib in Resources */,
 				65DF0E9D22E892DD006AC021 /* transaction.graphql in Resources */,
 				659C8C6122E7559B00DC71F6 /* Main.storyboard in Resources */,
+				65DF0EAB22E8AB85006AC021 /* TransactionHeader.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,14 +465,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65DF0EA922E8AB33006AC021 /* UIView.swift in Sources */,
 				65DF0E9A22E87FFA006AC021 /* UserMe.swift in Sources */,
 				659C8C5C22E7559B00DC71F6 /* AppDelegate.swift in Sources */,
+				65DF0EA422E8A92F006AC021 /* TransactionHeader.swift in Sources */,
+				65DF0EA122E8A0D2006AC021 /* ContainerViewController.swift in Sources */,
 				65DF0E9C22E88EBF006AC021 /* TransactionViewModel.swift in Sources */,
 				6559872522E77E4C0096C225 /* TransactionViewController.swift in Sources */,
 				65DF0E9822E85E15006AC021 /* Transaction.swift in Sources */,
 				6559872D22E782EA0096C225 /* TransactionService.swift in Sources */,
 				65DF0E9522E85B2B006AC021 /* NetworkManager.swift in Sources */,
 				654CAB0122E777D00014277E /* TransactionCell.swift in Sources */,
+				65DF0EA722E8AA09006AC021 /* XibView.swift in Sources */,
 				65DF0E8A22E796FD006AC021 /* NameDescribable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

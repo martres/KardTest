@@ -3,15 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E32DAA13710273045AD4B61 /* Pods_TestKard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7415AF3DBD90D4B1E0FE2CC9 /* Pods_TestKard.framework */; };
+		4891E01961EDA93D27D6AC50 /* Pods_TestKard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5083943CFD4A09CF6FB199C7 /* Pods_TestKard.framework */; };
 		654CAB0122E777D00014277E /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654CAAFF22E777D00014277E /* TransactionCell.swift */; };
 		654CAB0222E777D00014277E /* TransactionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 654CAB0022E777D00014277E /* TransactionCell.xib */; };
 		6559872522E77E4C0096C225 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6559872322E77E4C0096C225 /* TransactionViewController.swift */; };
-		6559872922E781680096C225 /* Apollo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6559872822E781680096C225 /* Apollo.swift */; };
 		6559872D22E782EA0096C225 /* TransactionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6559872C22E782EA0096C225 /* TransactionService.swift */; };
 		659C8C5C22E7559B00DC71F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659C8C5B22E7559B00DC71F6 /* AppDelegate.swift */; };
 		659C8C6122E7559B00DC71F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 659C8C5F22E7559B00DC71F6 /* Main.storyboard */; };
@@ -20,9 +19,11 @@
 		659C8C7122E755A200DC71F6 /* TestKardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659C8C7022E755A200DC71F6 /* TestKardTests.swift */; };
 		659C8C7C22E755A200DC71F6 /* TestKardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659C8C7B22E755A200DC71F6 /* TestKardUITests.swift */; };
 		65DF0E8A22E796FD006AC021 /* NameDescribable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DF0E8922E796FD006AC021 /* NameDescribable.swift */; };
-		65DF0E8E22E7C727006AC021 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 65DF0E8D22E7C727006AC021 /* schema.json */; };
-		65DF0E9022E7D6A8006AC021 /* transaction.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 65DF0E8622E790EE006AC021 /* transaction.graphql */; };
-		65DF0E9222E7D7B1006AC021 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DF0E9122E7D7B1006AC021 /* API.swift */; };
+		65DF0E9522E85B2B006AC021 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DF0E9422E85B2B006AC021 /* NetworkManager.swift */; };
+		65DF0E9822E85E15006AC021 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DF0E9722E85E15006AC021 /* Transaction.swift */; };
+		65DF0E9A22E87FFA006AC021 /* UserMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DF0E9922E87FFA006AC021 /* UserMe.swift */; };
+		65DF0E9C22E88EBF006AC021 /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DF0E9B22E88EBF006AC021 /* TransactionViewModel.swift */; };
+		65DF0E9D22E892DD006AC021 /* transaction.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 65DF0E8622E790EE006AC021 /* transaction.graphql */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,10 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5083943CFD4A09CF6FB199C7 /* Pods_TestKard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestKard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		654CAAFF22E777D00014277E /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 		654CAB0022E777D00014277E /* TransactionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionCell.xib; sourceTree = "<group>"; };
 		6559872322E77E4C0096C225 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
-		6559872822E781680096C225 /* Apollo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apollo.swift; sourceTree = "<group>"; };
 		6559872C22E782EA0096C225 /* TransactionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionService.swift; sourceTree = "<group>"; };
 		659C8C5822E7559B00DC71F6 /* TestKard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestKard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		659C8C5B22E7559B00DC71F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,13 +61,14 @@
 		659C8C7722E755A200DC71F6 /* TestKardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestKardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		659C8C7B22E755A200DC71F6 /* TestKardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestKardUITests.swift; sourceTree = "<group>"; };
 		659C8C7D22E755A200DC71F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65A8A621144EC46DDBF438A1 /* Pods-TestKard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestKard.debug.xcconfig"; path = "Target Support Files/Pods-TestKard/Pods-TestKard.debug.xcconfig"; sourceTree = "<group>"; };
 		65DF0E8622E790EE006AC021 /* transaction.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = transaction.graphql; sourceTree = "<group>"; };
 		65DF0E8922E796FD006AC021 /* NameDescribable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameDescribable.swift; sourceTree = "<group>"; };
-		65DF0E8D22E7C727006AC021 /* schema.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
-		65DF0E9122E7D7B1006AC021 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		7415AF3DBD90D4B1E0FE2CC9 /* Pods_TestKard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestKard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		98EB9497B3E5411ABED5F6F2 /* Pods-TestKard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestKard.debug.xcconfig"; path = "Target Support Files/Pods-TestKard/Pods-TestKard.debug.xcconfig"; sourceTree = "<group>"; };
-		A3CC5683D0BB04BE9CC5AEBA /* Pods-TestKard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestKard.release.xcconfig"; path = "Target Support Files/Pods-TestKard/Pods-TestKard.release.xcconfig"; sourceTree = "<group>"; };
+		65DF0E9422E85B2B006AC021 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		65DF0E9722E85E15006AC021 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		65DF0E9922E87FFA006AC021 /* UserMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMe.swift; sourceTree = "<group>"; };
+		65DF0E9B22E88EBF006AC021 /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
+		FA1312071E4D32DED5645A5F /* Pods-TestKard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestKard.release.xcconfig"; path = "Target Support Files/Pods-TestKard/Pods-TestKard.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E32DAA13710273045AD4B61 /* Pods_TestKard.framework in Frameworks */,
+				4891E01961EDA93D27D6AC50 /* Pods_TestKard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,8 +100,8 @@
 		3CBCDB3DB447497455790C5F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				98EB9497B3E5411ABED5F6F2 /* Pods-TestKard.debug.xcconfig */,
-				A3CC5683D0BB04BE9CC5AEBA /* Pods-TestKard.release.xcconfig */,
+				65A8A621144EC46DDBF438A1 /* Pods-TestKard.debug.xcconfig */,
+				FA1312071E4D32DED5645A5F /* Pods-TestKard.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				6559872322E77E4C0096C225 /* TransactionViewController.swift */,
+				65DF0E9B22E88EBF006AC021 /* TransactionViewModel.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -133,7 +136,7 @@
 		6559872722E781500096C225 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				6559872822E781680096C225 /* Apollo.swift */,
+				65DF0E9422E85B2B006AC021 /* NetworkManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -162,7 +165,7 @@
 				659C8C7A22E755A200DC71F6 /* TestKardUITests */,
 				659C8C5922E7559B00DC71F6 /* Products */,
 				3CBCDB3DB447497455790C5F /* Pods */,
-				997914E51E5F5BCD70393871 /* Frameworks */,
+				FFB87BCDEA4AC50EAAA6A7B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -179,11 +182,9 @@
 		659C8C5A22E7559B00DC71F6 /* TestKard */ = {
 			isa = PBXGroup;
 			children = (
-				65DF0E8622E790EE006AC021 /* transaction.graphql */,
-				65DF0E9122E7D7B1006AC021 /* API.swift */,
-				65DF0E8D22E7C727006AC021 /* schema.json */,
 				659C8C5B22E7559B00DC71F6 /* AppDelegate.swift */,
 				65DF0E8822E796AD006AC021 /* Extensions */,
+				65DF0E9622E85DE6006AC021 /* Model */,
 				6559872722E781500096C225 /* Network */,
 				6559872A22E782D50096C225 /* Services */,
 				654CAAFB22E776EE0014277E /* UI */,
@@ -221,10 +222,20 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		997914E51E5F5BCD70393871 /* Frameworks */ = {
+		65DF0E9622E85DE6006AC021 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7415AF3DBD90D4B1E0FE2CC9 /* Pods_TestKard.framework */,
+				65DF0E8622E790EE006AC021 /* transaction.graphql */,
+				65DF0E9722E85E15006AC021 /* Transaction.swift */,
+				65DF0E9922E87FFA006AC021 /* UserMe.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FFB87BCDEA4AC50EAAA6A7B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5083943CFD4A09CF6FB199C7 /* Pods_TestKard.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -236,12 +247,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 659C8C8022E755A200DC71F6 /* Build configuration list for PBXNativeTarget "TestKard" */;
 			buildPhases = (
-				5C26FD34CEF92ED27BD4C04A /* [CP] Check Pods Manifest.lock */,
-				6544209E22E7663800BFC851 /* Generate Apollo GraphQL API */,
+				F16EB4470014DB07A7382447 /* [CP] Check Pods Manifest.lock */,
 				659C8C5422E7559B00DC71F6 /* Sources */,
 				659C8C5522E7559B00DC71F6 /* Frameworks */,
 				659C8C5622E7559B00DC71F6 /* Resources */,
-				A79C023C4536D6D8D17EF6C5 /* [CP] Embed Pods Frameworks */,
+				6889B48ACF58A8B9C43F2424 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -336,11 +346,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65DF0E9022E7D6A8006AC021 /* transaction.graphql in Resources */,
-				65DF0E8E22E7C727006AC021 /* schema.json in Resources */,
 				659C8C6622E755A200DC71F6 /* LaunchScreen.storyboard in Resources */,
 				659C8C6322E755A200DC71F6 /* Assets.xcassets in Resources */,
 				654CAB0222E777D00014277E /* TransactionCell.xib in Resources */,
+				65DF0E9D22E892DD006AC021 /* transaction.graphql in Resources */,
 				659C8C6122E7559B00DC71F6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,7 +371,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5C26FD34CEF92ED27BD4C04A /* [CP] Check Pods Manifest.lock */ = {
+		6889B48ACF58A8B9C43F2424 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestKard/Pods-TestKard-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestKard/Pods-TestKard-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestKard/Pods-TestKard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F16EB4470014DB07A7382447 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -384,41 +410,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6544209E22E7663800BFC851 /* Generate Apollo GraphQL API */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 12;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Generate Apollo GraphQL API";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "SCRIPT_PATH=\"${PODS_ROOT}/Apollo/scripts\"\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/check-and-run-apollo-cli.sh codegen:generate --target=swift --includes=./*.graphql --localSchemaFile=\"schema.json\" API.swift\n";
-		};
-		A79C023C4536D6D8D17EF6C5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TestKard/Pods-TestKard-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TestKard/Pods-TestKard-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestKard/Pods-TestKard-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -426,13 +417,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65DF0E9A22E87FFA006AC021 /* UserMe.swift in Sources */,
 				659C8C5C22E7559B00DC71F6 /* AppDelegate.swift in Sources */,
+				65DF0E9C22E88EBF006AC021 /* TransactionViewModel.swift in Sources */,
 				6559872522E77E4C0096C225 /* TransactionViewController.swift in Sources */,
-				6559872922E781680096C225 /* Apollo.swift in Sources */,
+				65DF0E9822E85E15006AC021 /* Transaction.swift in Sources */,
 				6559872D22E782EA0096C225 /* TransactionService.swift in Sources */,
+				65DF0E9522E85B2B006AC021 /* NetworkManager.swift in Sources */,
 				654CAB0122E777D00014277E /* TransactionCell.swift in Sources */,
 				65DF0E8A22E796FD006AC021 /* NameDescribable.swift in Sources */,
-				65DF0E9222E7D7B1006AC021 /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,7 +598,7 @@
 		};
 		659C8C8122E755A200DC71F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 98EB9497B3E5411ABED5F6F2 /* Pods-TestKard.debug.xcconfig */;
+			baseConfigurationReference = 65A8A621144EC46DDBF438A1 /* Pods-TestKard.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -624,7 +617,7 @@
 		};
 		659C8C8222E755A200DC71F6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A3CC5683D0BB04BE9CC5AEBA /* Pods-TestKard.release.xcconfig */;
+			baseConfigurationReference = FA1312071E4D32DED5645A5F /* Pods-TestKard.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
